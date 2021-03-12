@@ -23,6 +23,7 @@
 .slider-wrapper .images img {
     display: none;
     height: 100%;
+    width: 90%;
 }
 .slider-wrapper .images img.active {
     display: inline-block;

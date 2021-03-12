@@ -28,7 +28,7 @@ function swipePrev() {
   }
 }
 //----------- fine delle FUNZIONI ----------------
-
+// --------------eventi al click----------------
     $(".prev").click(
       function() {
         swipePrev();
@@ -41,6 +41,33 @@ function swipePrev() {
       }
     );
 
+    $('.nav i.fa-circle').click(function () {
+      var img1 = $(".images img:eq(0)");
+      var img2 = $(".images img:eq(1)");
+      var img3 = $(".images img:eq(2)");
+      var img4 = $(".images img:eq(3)");
+      var imageActive = $('img.active');
+      var circleActive = $('.nav i');
+      imageActive.removeClass('active');
+      circleActive.removeClass('active');
+      $(this).addClass('active');
+      switch ($(this).index()) {
+        case 0:
+          img1.addClass('active');
+          break;
+        case 1:
+          img2.addClass('active');
+          break;
+        case 2:
+          img3.addClass('active');
+          break;
+        case 3:
+          img4.addClass('active');
+          break;
+      }
+    });
+// ---------fine degli eventi al click-----------
+// --------------eventi da tastiera--------------      
     $(document).keydown(
       function() {
         var eventoKeyPress = event.keyCode;
@@ -51,7 +78,6 @@ function swipePrev() {
         }
       }
     );
-
-
+// ---------fine degli eventi da tastiera---------
   }
 );
