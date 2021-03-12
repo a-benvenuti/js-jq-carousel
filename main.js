@@ -41,6 +41,17 @@ function swipePrev() {
       }
     );
 
+    $(document).keydown(
+      function() {
+        var eventoKeyPress = event.keyCode;
+        if (eventoKeyPress == 37) {
+          swipePrev();
+        } else if (eventoKeyPress == 39) {
+          swipeNext();
+        }
+      }
+    );
+
 
   }
 );
